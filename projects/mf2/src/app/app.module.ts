@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -13,12 +13,11 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot([
       {
         path: '',
-        loadChildren: () => import('./cathedral/cathedral.module').then(m => m.CathedralModule)
+        loadChildren: () => import('./city/city.module').then(m => m.CityModule)
       }
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

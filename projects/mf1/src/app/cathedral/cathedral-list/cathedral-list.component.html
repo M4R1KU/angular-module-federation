@@ -1,0 +1,10 @@
+<mat-nav-list *ngIf="cathedrals$ | async as cathedrals"
+              class="mat-elevation-z2">
+  <a [routerLink]="[cathedral.id]"
+     mat-list-item
+     *ngFor="let cathedral of cathedrals">
+    <img [src]="'/mf1' + cathedral.avatar"
+         mat-list-avatar/>
+    <span matLine>{{ cathedral.title }}</span>
+  </a>
+</mat-nav-list>

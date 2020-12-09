@@ -1,0 +1,24 @@
+<mat-card *ngIf="cathedral$ | async as cathedral">
+  <mat-card-header>
+    <a mat-icon-button
+       mat-card-avatar
+       routerLink="..">
+      <mat-icon>west</mat-icon>
+    </a>
+    <div mat-card-avatar
+         [style.background-image]="'url(\'/mf1' + cathedral.avatar + '\')'"></div>
+    <mat-card-title>{{ cathedral.title }}</mat-card-title>
+    <mat-card-subtitle>{{ cathedral.subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image
+       [src]="'/mf1' + cathedral.image">
+  <mat-card-content>
+    <p>
+      {{ cathedral.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,44 @@
+<table mat-table
+       [dataSource]="dataSource"
+       class="mat-elevation-z2">
+  <ng-container matColumnDef="city">
+    <th mat-header-cell
+        *matHeaderCellDef>
+      <mat-icon>business</mat-icon>
+      <span>City</span>
+    </th>
+    <td mat-cell
+        *matCellDef="let element">
+      {{ element.city }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="canton">
+    <th mat-header-cell
+        *matHeaderCellDef>
+      <mat-icon>account_balance</mat-icon>
+      <span>Canton</span>
+    </th>
+    <td mat-cell
+        *matCellDef="let element">
+      {{ element.canton }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="population">
+    <th mat-header-cell
+        *matHeaderCellDef>
+      <mat-icon>groups</mat-icon>
+      <span>Population</span>
+    </th>
+    <td mat-cell
+        *matCellDef="let element">
+      {{ element.population | number }}
+    </td>
+  </ng-container>
+
+  <tr mat-header-row
+      *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row
+      *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,11 @@
+.mat-card-avatar {
+  background-size: cover;
+
+  &.mat-icon-button {
+    text-align: center;
+  }
+
+  & + .mat-card-avatar {
+    margin-left: 8px;
+  }
+}

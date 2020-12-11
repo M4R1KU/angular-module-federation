@@ -2,8 +2,7 @@
   "name": "angular-module-federation",
   "version": "0.0.0",
   "scripts": {
-    "build": "ng build && ng build mf1",
-    "serve:dist": "concurrently \"serve dist/shell -l 5000 -s\" \"serve dist/mf1 -l 3000 -s\" "
+    "serve": "concurrently \"ng s -o\" \"ng s mf1\" \"ng s mf2\""
   },
   "private": true,
   "resolutions": {

@@ -7,40 +7,17 @@ export default {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        mfe1: 'mfe1'
-      },
       shared: {
-        '@angular/core': {
-          eager: true
-        },
-        '@angular/common': {
-          eager: true
-        },
-        '@angular/common/': {
-          eager: true
-        },
-        '@angular/router': {
-          eager: true
-        },
-        '@angular/cdk': {
-          eager: true
-        },
-        '@angular/cdk/': {
-          eager: true
-        },
-        '@angular/material': {
-          eager: true
-        },
-        '@angular/material/': {
-          eager: true
-        },
-        rxjs: {
-          eager: true
-        },
-        'rxjs/': {
-          eager: true
-        }
+        '@angular/core': { eager: true },
+        '@angular/common': { eager: true },
+        '@angular/common/': { eager: true },
+        '@angular/router': { eager: true },
+        '@angular/cdk': { eager: true },
+        '@angular/cdk/': { eager: true },
+        '@angular/material': { eager: true },
+        '@angular/material/': { eager: true },
+        rxjs: { eager: true },
+        'rxjs/': { eager: true }
       }
     })
   ]

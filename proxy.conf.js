@@ -4,11 +4,9 @@ const PROXY_CONFIG = [
       '/mf1'
     ],
     target: 'http://localhost:3000/',
-    rewritePath: '',
     changeOrigin: true,
-    logLevel: 'debug',
     pathRewrite: {
-      '^/mf1': '', // rewrite path
+      '^/mf1': '',
     }
   },
 ];
